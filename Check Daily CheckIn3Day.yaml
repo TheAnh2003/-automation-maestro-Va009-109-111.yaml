@@ -1,0 +1,46 @@
+appId: com.aihub.all.in.one.ai.photo.video.audio.editor.generator.tools.studio
+---
+
+- launchApp:
+    clearState: true
+
+# Language screen
+- assertVisible:
+    id: tvTitle
+
+- tapOn:
+    id: imvSelect
+    index: 0
+
+- tapOn:
+    id: btnCheck
+
+# Onboarding
+- tapOn: Continue
+- tapOn: Continue
+- tapOn: Continue
+- tapOn: Get started
+
+# Daily Checkin
+- assertVisible: Daily Rewards
+- assertVisible: Check in
+
+- tapOn:
+    id: btn_close
+
+- tapOn:
+    id: navigation_bar_item_inner_content_container
+    index: 2
+
+- assertVisible:
+    id: icon_check
+
+- assertVisible:
+    id: icon_check
+
+- assertVisible:
+    id: crystal
+    index: 2
+
+- tapOn:
+    id: tv_check_in
