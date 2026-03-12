@@ -21,26 +21,58 @@ appId: com.aihub.all.in.one.ai.photo.video.audio.editor.generator.tools.studio
 - tapOn: Continue
 - tapOn: Get started
 
-# Daily Checkin
-- assertVisible: Daily Rewards
-- assertVisible: Check in
-
+# Sub Screen 
 - tapOn:
-    id: btn_close
+    id: im_vip_member
 
-- tapOn:
-    id: navigation_bar_item_inner_content_container
-    index: 2
+- assertVisible: Store
 
+- assertVisible: Vip Benefit
+- assertVisible: Priority VIP Queue
+- assertVisible: Ad-Free Experience
+- assertVisible: Unlimited Gems
+- assertVisible: Unlimited Generations
+- assertVisible: Multi-Task Generation
+- assertVisible: Weekly
 - assertVisible:
-    id: icon_check
+    text: 157.000 ₫/week
+    index: 1
+- assertVisible: 157.000 ₫/week
 
+- assertVisible: Yearly
 - assertVisible:
-    id: icon_check
-
+    text: 2.350.000 ₫/year
+    index: 1
+- assertVisible: 2.350.000 ₫/year
+- assertVisible: auto-renewing unless canceled.
+- assertVisible: Gems
+- assertVisible: "200"
 - assertVisible:
-    id: crystal
-    index: 2
+    text: "200"
+    index: 1
+- assertVisible: 52.000 ₫
+- assertVisible: +10% Top choice
+- assertVisible: "440"
+- assertVisible: "400"
+- assertVisible: +40 Bonus
+- assertVisible: 105.000 ₫
+- assertVisible: "1100"
+- assertVisible: "1000"
+- assertVisible: +100 Bonus
+- assertVisible: 184.000 ₫
+- assertVisible: +20% Best value
+- assertVisible: "2400"
+- assertVisible: "2000"
+- assertVisible: +400 Bonus
+- assertVisible: 264.000 ₫
+- assertVisible: "4800"
+- assertVisible: "4000"
+- assertVisible: +800 Bonus
+- assertVisible: 527.000 ₫
+- assertVisible: +30% Super choice
+- assertVisible: "10400"
+- assertVisible: "8000"
+- assertVisible: +2400 Bonus
+- assertVisible: 791.000 ₫
 
-- tapOn:
-    id: tv_check_in
+    
