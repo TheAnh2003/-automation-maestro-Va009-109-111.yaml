@@ -1,0 +1,358 @@
+appId: com.aihub.all.in.one.ai.photo.video.audio.editor.generator.tools.studio
+---
+- launchApp:
+    clearState: true
+
+# Language screen
+- assertVisible:
+    id: tvTitle
+
+- tapOn:
+    id: imvSelect
+    index: 0
+
+- tapOn:
+    id: btnCheck
+
+# Onboarding
+- tapOn: Continue
+- tapOn: Continue
+- tapOn: Continue
+- tapOn: Get started
+
+# Daily reward
+- assertVisible:
+    id: tv_title
+
+- tapOn:
+    id: btn_close
+
+# Home screen
+# - assertVisible: VIP
+- assertVisible:
+    id: im_vip_member
+
+- assertVisible: Start creative
+
+- scrollUntilVisible:
+    element:
+      text: Face Swap
+- scrollUntilVisible:
+    element:
+      text: AI Hair
+- scrollUntilVisible:
+    element:
+      text: ID Card
+- scrollUntilVisible:
+    element:
+      text: AI Restoration
+- scrollUntilVisible:
+    element:
+      text: Remove Watermark
+- scrollUntilVisible:
+    element:
+      text: Dress-Up
+- scrollUntilVisible:
+    element:
+      text: Remove Background
+- scrollUntilVisible:
+    element:
+      text: Makeup
+- scrollUntilVisible:
+    element:
+      text: Inspiration
+- scrollUntilVisible:
+    element:
+      text: Hot Scene Video
+
+- scrollUntilVisible:
+    element:
+      text: Couple Photo
+- scrollUntilVisible:
+    element:
+      text: Grid Photo
+- scrollUntilVisible:
+    element:
+      text: AI Dress-Up
+- scrollUntilVisible:
+    element:
+      text: Me and Myself
+- scrollUntilVisible:
+    element:
+      text: AI Photo Transform
+- scrollUntilVisible:
+    element:
+      text: AI Photo Style
+- scrollUntilVisible:
+    element:
+      text: "Winter Trend "
+- scrollUntilVisible:
+    element:
+      text: AI Action Photo
+- scrollUntilVisible:
+    element:
+      text: Splash Water Video
+- scrollUntilVisible:
+    element:
+      text: New Year
+- scrollUntilVisible:
+    element:
+      text: 3D Style
+- scrollUntilVisible:
+    element:
+      text: AI Polaroid
+- scrollUntilVisible:
+    element:
+      text: Hot Dance Video
+- scrollUntilVisible:
+    element:
+      text: Season Photo
+- scrollUntilVisible:
+    element:
+      text: Movie Polaroid
+- scrollUntilVisible:
+    element:
+      text: 360° Cine
+- scrollUntilVisible:
+    element:
+      text: Multi - Image
+- scrollUntilVisible:
+    element:
+      text: AI Figurine
+- scrollUntilVisible:
+    element:
+      text: AI Girlfriend
+- scrollUntilVisible:
+    element:
+      text: Alternative You
+- scrollUntilVisible:
+    element:
+      text: Toy Maker
+- scrollUntilVisible:
+    element:
+      text: Magazine Cover
+- scrollUntilVisible:
+    element:
+      text: Dreamy Filter
+- scrollUntilVisible:
+    element:
+      text: AI Video Style
+- scrollUntilVisible:
+    element:
+      text: Fantasy
+- scrollUntilVisible:
+    element:
+      text: "AI Enhancement "
+- scrollUntilVisible:
+    element:
+      text: Professional Photography
+- scrollUntilVisible:
+    element:
+      text: Poster
+- scrollUntilVisible:
+    element:
+      text: Relight
+- scrollUntilVisible:
+    element:
+      text: AI Hair
+- scrollUntilVisible:
+    element:
+      text: Avatar
+- scrollUntilVisible:
+    element:
+      text: AI Pose
+- scrollUntilVisible:
+    element:
+      text: Zootopia
+- scrollUntilVisible:
+    element:
+      text: All Apps
+- scrollUntilVisible:
+    element:
+      text: Christmas
+
+# Navbar
+- assertVisible: Home
+- assertVisible: Favourite
+- assertVisible: Reward
+- assertVisible: Creation
+
+# Favourite 
+- tapOn:
+    id: navigation_bar_item_inner_content_container
+    index: 1
+- assertVisible: No favorites yet
+- assertVisible: Add file to favorites
+
+# Reward 
+- tapOn:
+    id: navigation_bar_item_inner_content_container
+    index: 2
+
+- assertVisible: Daily Rewards
+- assertVisible: Day 1
+- assertVisible: Day 2
+- assertVisible: Day 3
+- assertVisible: Day 4
+- assertVisible: Day 5
+- assertVisible: Day 6
+- assertVisible: Day 7
+- assertVisible: Check in
+- assertVisible: Earn rewards
+- assertVisible: Daily Reward Ads
+- assertVisible: Watch (0/10)
+- assertVisible: Allow Notification Access
+
+# Creation 
+- tapOn:
+    id: navigation_bar_item_inner_content_container
+    index: 3
+- assertVisible: Your Creation
+- assertVisible: In progress
+# - assertVisible: No recent activity yet
+# - assertVisible: Start exploring now
+
+
+# - tapOn: Start exploring now
+- swipe:
+    direction: DOWN
+    duration: 200
+
+- swipe:
+    direction: DOWN
+    duration: 200
+
+- swipe:
+    direction: DOWN
+    duration: 200
+- scrollUntilVisible:
+    element:
+      id: tv_start_creative
+    direction: UP
+    timeout: 30000
+    visibilityPercentage: 50
+
+- tapOn:
+    id: tv_start_creative    
+# - assertVisible: Giant Figurine
+- assertVisible: Upload image
+- assertVisible: Run
+- tapOn:
+    id: icPlaceholder
+- assertVisible: Allow Image
+- assertVisible: Blocked Image
+
+- assertVisible: Guide
+- assertVisible: Select Photo
+
+
+- tapOn: Select Photo
+- assertVisible: Select Photo
+- assertVisible: sample
+- tapOn:
+    id: imvSelect
+- tapOn:
+    id: btn_done
+- assertVisible: Crop Image
+- assertVisible: Run
+- tapOn:
+    id: btnRun
+- assertVisible: Processing may take a few minutes. Please wait…
+- assertVisible: Generating...
+- assertVisible: Pick your material
+- assertVisible: Scan and analyze your material
+#### - assertVisible: Your turn is ready
+- assertVisible: Generate your image...
+- assertVisible: More style
+- tapOn:
+    id: btnMoreStyle
+
+- assertVisible: Generate your image...
+- assertVisible: Generating...
+
+- extendedWaitUntil:
+    visible: Image generated successfully!
+    timeout: 300000
+    optional: true
+
+- runFlow:
+    when:
+      visible: Image generated successfully!
+    commands:
+      - assertVisible: See now
+
+- runFlow:
+    when:
+      visible: AI generation failed. Please try again.
+    commands:
+      - assertVisible: Try again
+
+- assertVisible: See now
+
+# Settings
+
+- tapOn:
+    id: imgSetting
+
+- assertVisible: Setting
+- assertVisible: Language
+- assertVisible: English
+- assertVisible: Rate This App
+- assertVisible: Privacy Policy
+- tapOn: Rate This App
+- assertVisible: Thank you for your support!
+- assertVisible: We would be very grateful if you can rate us.
+- assertVisible: The best we can get
+- assertVisible: Rate
+
+
+- tapOn:
+    id: star5
+- assertVisible: Much appreciated!
+- assertVisible: Your support is our biggest motivation!
+- tapOn: Rate
+- assertVisible: Appreciate your feedback!
+- assertVisible: Your feedback has been noted and we’ll improve the app in the next update. Thank you!
+- assertVisible: Close
+- tapOn: Close
+
+- tapOn: Rate This App
+- tapOn:
+    id: star3
+- assertVisible: Oh, We’re sorry
+- assertVisible: Your feedback is welcome
+- tapOn: Rate
+- assertVisible: Please let us know the reason
+- assertVisible: Which of the following best describes the main issue you've encountered?
+- assertVisible: Output quality not as expected
+- assertVisible: AI didn’t generate or respond
+- assertVisible: Audio or voice clone not accurate
+- assertVisible: Face swap failed or mismatched
+- assertVisible: "Export or save failed "
+- assertVisible: Other
+- assertVisible: Description (optional)
+- assertVisible: Email (option)
+- scrollUntilVisible:
+    element:
+      text: Upload screenshot/files
+- scrollUntilVisible:
+    element:
+      text: up to 5 files images or videos
+- scrollUntilVisible:
+    element:
+      text: Send
+
+- scrollUntilVisible:
+    element:
+      text: Cancel
+
+   
+
+
+
+
+
+
+
+    
+
